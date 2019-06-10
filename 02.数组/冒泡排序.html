@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // //冒泡排序  --从小到大排序
+        // let numbers = [97, 68, 72, 29, 51, 45]
+        // let count = 0
+        // //外层循环  控制趟数，每一趟找到一个最大值
+        // for (let i = 0; i < numbers.length - 1; i++) {
+        //     count++
+        //     //内层循环  控制比较的次数，并且判断两个数的大小，把大的数往后移动，小的数往前移动
+        //     for (let j = 0; j < numbers.length - 1 - i; j++) {
+        //         count++
+        //         //两两比较  从小到大排序
+        //         if (numbers[j] > numbers[j + 1]) {
+        //             //交换位置
+        //             [numbers[j], numbers[j + 1]] = [numbers[j + 1], numbers[j]]
+        //         }
+        //     }
+        // }
+        // console.log(numbers);
+        // console.log(count);
+
+
+        //===============================优化
+
+        let numbers = [97, 68, 72, 29, 51, 45]
+        let count = 0
+        let isSort = true
+        //外层循环  控制趟数，每一趟找到一个最大值
+        for (let i = 0; i < numbers.length - 1; i++) {
+            count++
+            //内层循环  控制比较的次数，并且判断两个数的大小，把大的数往后移动，小的数往前移动
+            for (let j = 0; j < numbers.length - 1 - i; j++) {
+                count++
+                //两两比较  从小到大排序
+                if (numbers[j] > numbers[j + 1]) {
+                    //交换位置
+                    isSort = false;
+                    [numbers[j], numbers[j + 1]] = [numbers[j + 1], numbers[j]]
+                    
+                }
+            }
+            //某一趟结束，判断一下排序是否结束 
+            // if (isSort) {
+            //     break
+            // }
+        }
+        console.log(numbers);
+        console.log(count);
+
+    </script>
+</body>
+
+</html>

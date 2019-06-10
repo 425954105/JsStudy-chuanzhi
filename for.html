@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sum = 0
+        for (let i = 0; i <= 100; i++) {
+            sum += i
+        }
+        console.log(sum);
+
+
+        // let i = 1
+        // while (i <= 100) {
+        //     console.log(i);
+        //     i++
+        // }
+        let str = ''
+        let t = 10
+        for (let a = 0; a < 10; a++) {
+            t--
+            for (let b = 0; b < t; b++) {
+                str += '* '
+            }
+            str += '\n'
+        }
+        console.log(str);
+
+        let stt = ''
+        let  num = 9
+        for (let a = 1; a <= 9; a++) {
+            for (let b = a; b <= 9; b++) {
+                stt += `${a} * ${b} = ${a*b}     `
+            }
+            num--
+            stt += '\n'
+        }
+        console.log(stt);
+
+        let base = 10000, rent = 0.003, get = 0
+        for (let year = 1; year <= 5; year++) {
+            base += base * rent
+        }
+        console.log(base);
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = 123
+        console.log(Boolean(num));
+
+        //  转换为false的情况   0   ''空字符串  NaN    null    undefined
+        //  隐式类型转换
+        if (num) {
+            console.log('hello');
+        }
+
+        var msg;
+        if (msg) {
+            console.log('Hi');
+        }
+
+        var str = '123'
+        var isOK = !str
+
+        if (isOK) {
+            console.log(isOK);
+        }
+    </script>
+</body>
+
+</html>
