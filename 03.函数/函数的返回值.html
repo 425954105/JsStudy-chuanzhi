@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  - 求一组数中的最大值
+        let a = [1, 5, 12, 26, 40]
+        function getMax(arr) {
+            let max = arr[0]
+            for (var i = 0; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i]
+                }
+            }
+            return max
+        }
+        //  有返回值的函数可以当做值来使用
+        let num1 = 5
+        let result = getMax(a) + num1
+        console.log(result);
+
+        //  - 求阶乘
+        function getJieCheng(num) {
+            let res = 1
+            for (let i = 1; i <= num; i++) {
+                res *= i
+            }
+            return res
+            console.log(res);
+        }
+        let num = getJieCheng(5)
+        console.log(num);
+        
+
+    </script>
+</body>
+
+</html>

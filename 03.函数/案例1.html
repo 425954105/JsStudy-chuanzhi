@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //  求斐波那切数列中的第n个数是多少     1 1 2 3 5 8 13 21 ...
+    // function getFib(n) {
+    //     let n1 = 1
+    //     let n2 = 1
+    //     let n3
+    //     for (let i = 3; i <= n; i++) {
+    //         n3 = n1 + n2
+    //         n1 = n2
+    //         n2 = n3
+    //     }
+    //     return n3
+    // }
+    // let r = getFib(8)
+    // console.log(r);
+    
+    //  反转数组，返回一个新数组 [5,4,3,2,1] -> [1,2,3,4,5]
+    // function reverse (array) {
+    //     let newArray = []
+    //     for (let i = array.length-1; i>=0; i--) {
+    //         newArray[newArray.length] = array[i]
+    //     }
+    //     return newArray
+    // }
+
+    // let arr = [5,3,2,1]
+    // console.log(reverse(arr));
+    
+
+    //  对数组排序，从小到大    --冒泡排序
+    // function sort(array) {
+    //     for (let i = 0; i < array.length - 1; i++) {
+    //         let isSort = true
+    //         for (let j = 0; j < array.length - 1 - i; j++) {
+    //             if (array[j] > array[j+1]) {
+    //                 isSort = false
+    //                 let tmp = array[j]
+    //                 array[j] = array[j+1]
+    //                 array[j+1 ] = tmp
+    //             }
+    //         }
+    //         if (isSort) {
+    //             break
+    //         }
+    //     }
+    //     return array
+    // }
+    // let arr = [18, 10, 89, 1, 11]
+    // console.log(sort(arr));
+
+
+    //  输入一个年份，判断是否是闰年 能被四整除并且不能被100整除，或者能被400整除
+    function isRun(year) {
+        let result = false
+        if ((year % 4 === 0 && year %400 != 0)||(year % 400 === 0)){
+            result = true
+        }
+        return result
+    }
+    
+        </script>    
+</body>
+</html>
