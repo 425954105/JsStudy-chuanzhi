@@ -61,12 +61,54 @@
     //  输入一个年份，判断是否是闰年 能被四整除并且不能被100整除，或者能被400整除
     function isRun(year) {
         let result = false
-        if ((year % 4 === 0 && year %400 != 0)||(year % 400 === 0)){
+        if ((year % 4 === 0 && year %400 != 0) || (year % 400 === 0)){
             result = true
         }
         return result
     }
-    
+    //  let flag = isRun(2012)
+    //  console.log(flag);
+     
+
+     // 输入某年某月某日，判断这一天是这一年的第几天
+     // 1998 5 18
+     // 5月份 18
+     // 4月份 30
+     // 3月份 31
+     // 2月份 闰年29天 平年28天
+     // 1月份 31
+
+     function getDays(year,month,day) {
+         let days = day
+         for (let i = 1; i < month; i++) {
+             switch (i) {
+                 case 1:
+                 case 3:
+                 case 5:
+                 case 7:
+                 case 8:
+                 case 10:
+                 case 12:
+                 days += 31
+                 break;
+                 case 4:
+                 case 6:
+                 case 9:
+                 case 11:
+                 days += 30
+                 break;
+                 case 2:
+                 if (isRun(year)) {
+                     days += 29
+                 } else {
+                     days += 28
+                 }
+             }
+         }
+         return days
+     }
+     console.log(getDays(1998,5,2));
+     
         </script>    
 </body>
 </html>
